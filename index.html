@@ -1,78 +1,129 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote pour le titre de la communauté</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vote pour le titre de la communauté</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto p-4 md:p-8">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl md:text-5xl font-black text-gray-900">Choisissez le nom de notre communauté</h1>
+      <p class="mt-4 text-lg md:text-xl text-gray-600">Pour lancer notre communauté WeWard, aidez‑nous à choisir le meilleur titre parmi les 5 options. Votez pour votre préféré en cliquant sur le bouton !</p>
+    </header>
 
-    <div class="container mx-auto p-4 md:p-8">
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">1. La Team des Studi Warriors</h2>
+          <p class="text-gray-600 mb-4 text-sm">Ce titre reprend le nom percutant proposé par Nicolas, mais en y ajoutant « La Team des » pour indiquer qu'il s'agit d'un groupe d'individus et non d'une initiative officielle de l'entreprise.</p>
+        </div>
+        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="La Team des Studi Warriors" href="#" role="button" aria-label="Voter pour La Team des Studi Warriors">Voter</a>
+      </div>
 
-        <header class="text-center mb-8">
-            <h1 class="text-3xl md:text-5xl font-black text-gray-900">Choisissez le nom de notre communauté</h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-600">Pour lancer notre communauté WeWard, aidez-nous à choisir le meilleur titre parmi les 5 options. Votez pour votre préféré en cliquant sur le bouton !</p>
-        </header>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">2. Le Crew Studi</h2>
+          <p class="text-gray-600 mb-4 text-sm">Court, moderne et convivial, ce titre utilise un terme anglais informel pour désigner un groupe d'amis ou de camarades soudés, ce qui est parfait pour une communauté d'entraide.</p>
+        </div>
+        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="Le Crew Studi" href="#" role="button" aria-label="Voter pour Le Crew Studi">Voter</a>
+      </div>
 
-        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 3 -->
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">3. Les Boosters de la Promo Studi</h2>
+          <p class="text-gray-600 mb-4 text-sm">Ce titre fait directement écho au nom de votre groupe « Boost your MBA » et se concentre sur l'idée de « booster » les pas et la motivation. C'est dynamique et très pertinent pour les apprenants.</p>
+        </div>
+        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="Les Boosters de la Promo Studi" href="#" role="button" aria-label="Voter pour Les Boosters de la Promo Studi">Voter</a>
+      </div>
 
-            <!-- Card 1 -->
-            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 mb-2">1. La Team des Studi Warriors</h2>
-                    <p class="text-gray-600 mb-4 text-sm">Ce titre reprend le nom percutant proposé par Nicolas, mais en y ajoutant "La Team des" pour indiquer qu'il s'agit d'un groupe d'individus et non d'une initiative officielle de l'entreprise.</p>
-                </div>
-                <a href="mailto:mathilde.martine.paisley@gmail.com?subject=Mon vote pour la communauté&body=Je vote pour le titre : La Team des Studi Warriors" class="mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">Voter</a>
-            </div>
+      <!-- Card 4 -->
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">4. L'Élite des Marcheurs Studi</h2>
+          <p class="text-gray-600 mb-4 text-sm">En utilisant le mot « Élite » de votre « Payroll Boss Elite Club », ce titre donne un sentiment d'appartenance à un groupe performant et motivé. Il est parfait pour une communauté qui veut exceller ensemble.</p>
+        </div>
+        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="L'Élite des Marcheurs Studi" href="#" role="button" aria-label="Voter pour L'Élite des Marcheurs Studi">Voter</a>
+      </div>
 
-            <!-- Card 2 -->
-            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 mb-2">2. Le Crew Studi</h2>
-                    <p class="text-gray-600 mb-4 text-sm">Court, moderne et convivial, ce titre utilise un terme anglais informel pour désigner un groupe d'amis ou de camarades soudés, ce qui est parfait pour une communauté d'entraide.</p>
-                </div>
-                <a href="mailto:mathilde.martine.paisley@gmail.com?subject=Mon vote pour la communauté&body=Je vote pour le titre : Le Crew Studi" class="mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">Voter</a>
-            </div>
+      <!-- Card 5 -->
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">5. La Team des Apprenants Studi</h2>
+          <p class="text-gray-600 mb-4 text-sm">Un titre simple, direct et très clair. Il ne laisse aucune place au doute sur l'origine et l'objectif de la communauté. Il est idéal si vous recherchez la plus grande prudence et clarté.</p>
+        </div>
+        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="La Team des Apprenants Studi" href="#" role="button" aria-label="Voter pour La Team des Apprenants Studi">Voter</a>
+      </div>
+    </main>
 
-            <!-- Card 3 -->
-            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 mb-2">3. Les Boosters de la Promo Studi</h2>
-                    <p class="text-gray-600 mb-4 text-sm">Ce titre fait directement écho au nom de votre groupe "Boost your MBA" et se concentre sur l'idée de "booster" les pas et la motivation. C'est dynamique et très pertinent pour les apprenants.</p>
-                </div>
-                <a href="mailto:mathilde.martine.paisley@gmail.com?subject=Mon vote pour la communauté&body=Je vote pour le titre : Les Boosters de la Promo Studi" class="mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">Voter</a>
-            </div>
+    <footer class="text-center mt-8">
+      <div class="text-md md:text-lg text-gray-600">Rejoignez‑nous sur Discord :
+        <a href="https://discord.gg/XXVhw2JWa7" target="_blank" class="text-blue-500 underline hover:no-underline">Boost your MBA CDO &amp; SD Studi</a>
+        et
+        <a href="https://discord.gg/RnjCG8HUqg" target="_blank" class="text-blue-500 underline hover:no-underline">Payroll Boss Elite Club</a>
+      </div>
+      <p class="text-xs text-gray-500 mt-4">Cette initiative est un projet 100% étudiant et n'est pas officiellement affiliée à Studi ou WeWard.</p>
+    </footer>
+  </div>
 
-            <!-- Card 4 -->
-            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 mb-2">4. L'Élite des Marcheurs Studi</h2>
-                    <p class="text-gray-600 mb-4 text-sm">En utilisant le mot "Élite" de votre "Payroll Boss Elite Club", ce titre donne un sentiment d'appartenance à un groupe performant et motivé. Il est parfait pour une communauté qui veut exceller ensemble.</p>
-                </div>
-                <a href="mailto:mathilde.martine.paisley@gmail.com?subject=Mon vote pour la communauté&body=Je vote pour le titre : L'Élite des Marcheurs Studi" class="mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">Voter</a>
-            </div>
+  <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 hidden bg-gray-900 text-white text-sm px-4 py-2 rounded-lg shadow-lg">Un brouillon d'email a été préparé. Si votre messagerie ne s'ouvre pas, copiez/collez l'adresse : <span class="underline">mathilde.martine.paisley@gmail.com</span></div>
 
-            <!-- Card 5 -->
-            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 mb-2">5. La Team des Apprenants Studi</h2>
-                    <p class="text-gray-600 mb-4 text-sm">Un titre simple, direct et très clair. Il ne laisse aucune place au doute sur l'origine et l'objectif de la communauté. Il est idéal si vous recherchez la plus grande prudence et clarté.</p>
-                </div>
-                <a href="mailto:mathilde.martine.paisley@gmail.com?subject=Mon vote pour la communauté&body=Je vote pour le titre : La Team des Apprenants Studi" class="mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">Voter</a>
-            </div>
+  <script>
+    (function () {
+      const RECIPIENT = "mathilde.martine.paisley@gmail.com"; // ✉️ Modifiez ici si besoin
+      const SUBJECT = "Mon vote pour la communauté";
 
-        </main>
-        
-        <footer class="text-center mt-8">
-            <div class="text-md md:text-lg text-gray-600">Rejoignez-nous sur Discord : 
-                <a href="https://discord.gg/XXVhw2JWa7" target="_blank" class="text-blue-500 underline hover:no-underline">Boost your MBA CDO & SD Studi</a> et 
-                <a href="https://discord.gg/RnjCG8HUqg" target="_blank" class="text-blue-500 underline hover:no-underline">Payroll Boss Elite Club</a>
-            </div>
-            <p class="text-xs text-gray-500 mt-4">Cette initiative est un projet 100% étudiant et n'est pas officiellement affiliée à Studi ou WeWard.</p>
-        </footer>
+      function buildBody(choice) {
+        // Utilise \n pour des retours chariot universels (convertis en %0D%0A)
+        return (
+          "Bonjour Mathilde,\n\n" +
+          "Je vote pour le titre : " + choice + "\n\n" +
+          "(Envoyé depuis la page de vote)\n"
+        );
+      }
 
-    </div>
+      function openMailClient(choice) {
+        const body = buildBody(choice);
+        const mailto = `mailto:${encodeURIComponent(RECIPIENT)}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
 
+        // Ouverture du client mail par défaut
+        window.location.href = mailto;
+
+        // Petit toast d'aide au cas où rien ne s'ouvre (certaines configs bloquent mailto:)
+        const toast = document.getElementById("toast");
+        if (toast) {
+          toast.classList.remove("hidden");
+          setTimeout(() => toast.classList.add("hidden"), 5000);
+        }
+      }
+
+      // Amélioration progressive : on génère aussi les href pour accessibilité/long‑press sur mobile
+      function setHref(el, choice) {
+        const mailto = `mailto:${encodeURIComponent(RECIPIENT)}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(buildBody(choice))}`;
+        el.setAttribute("href", mailto);
+      }
+
+      document.querySelectorAll(".vote-btn").forEach((btn) => {
+        const choice = btn.getAttribute("data-choice") || "Mon choix";
+        setHref(btn, choice);
+        btn.addEventListener("click", (e) => {
+          // Laisse le href fonctionner en fallback si l'appel JS est bloqué
+          e.preventDefault();
+          openMailClient(choice);
+        });
+        // Accessibilité clavier
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openMailClient(choice);
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
