@@ -10,53 +10,70 @@
   <div class="container mx-auto p-4 md:p-8">
     <header class="text-center mb-8">
       <h1 class="text-3xl md:text-5xl font-black text-gray-900">Choisissez le nom de notre communauté</h1>
-      <p class="mt-4 text-lg md:text-xl text-gray-600">Pour lancer notre communauté WeWard, aidez‑nous à choisir le meilleur titre parmi les 5 options. Votez pour votre préféré en cliquant sur le bouton !</p>
+      <p class="mt-4 text-lg md:text-xl text-gray-600">Pour lancer notre communauté WeWard, aidez‑nous à choisir le meilleur titre parmi les 5 options. Votez pour votre préféré en remplissant le mini‑formulaire !</p>
+
+      <!-- Export CSV -->
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <button id="exportCsvBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-emerald-300">Exporter les votes (CSV)</button>
+        <span id="totalVotes" class="text-sm text-gray-600">0 vote</span>
+      </div>
     </header>
 
     <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Card 1 -->
+      <!-- Card template note: each has a badge with the live count -->
       <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
         <div>
           <h2 class="text-xl font-bold text-gray-900 mb-2">1. La Team des Studi Warriors</h2>
           <p class="text-gray-600 mb-4 text-sm">Ce titre reprend le nom percutant proposé par Nicolas, mais en y ajoutant « La Team des » pour indiquer qu'il s'agit d'un groupe d'individus et non d'une initiative officielle de l'entreprise.</p>
         </div>
-        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="La Team des Studi Warriors" href="#" role="button" aria-label="Voter pour La Team des Studi Warriors">Voter</a>
+        <div class="flex items-center justify-between mt-2">
+          <a class="vote-btn bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="La Team des Studi Warriors" href="#" role="button" aria-label="Voter pour La Team des Studi Warriors">Voter</a>
+          <span class="count-badge text-xs bg-gray-100 text-gray-700 border px-2 py-1 rounded" data-choice="La Team des Studi Warriors">0</span>
+        </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
         <div>
           <h2 class="text-xl font-bold text-gray-900 mb-2">2. Le Crew Studi</h2>
           <p class="text-gray-600 mb-4 text-sm">Court, moderne et convivial, ce titre utilise un terme anglais informel pour désigner un groupe d'amis ou de camarades soudés, ce qui est parfait pour une communauté d'entraide.</p>
         </div>
-        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="Le Crew Studi" href="#" role="button" aria-label="Voter pour Le Crew Studi">Voter</a>
+        <div class="flex items-center justify-between mt-2">
+          <a class="vote-btn bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="Le Crew Studi" href="#" role="button" aria-label="Voter pour Le Crew Studi">Voter</a>
+          <span class="count-badge text-xs bg-gray-100 text-gray-700 border px-2 py-1 rounded" data-choice="Le Crew Studi">0</span>
+        </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
         <div>
           <h2 class="text-xl font-bold text-gray-900 mb-2">3. Les Boosters de la Promo Studi</h2>
           <p class="text-gray-600 mb-4 text-sm">Ce titre fait directement écho au nom de votre groupe « Boost your MBA » et se concentre sur l'idée de « booster » les pas et la motivation. C'est dynamique et très pertinent pour les apprenants.</p>
         </div>
-        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="Les Boosters de la Promo Studi" href="#" role="button" aria-label="Voter pour Les Boosters de la Promo Studi">Voter</a>
+        <div class="flex items-center justify-between mt-2">
+          <a class="vote-btn bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="Les Boosters de la Promo Studi" href="#" role="button" aria-label="Voter pour Les Boosters de la Promo Studi">Voter</a>
+          <span class="count-badge text-xs bg-gray-100 text-gray-700 border px-2 py-1 rounded" data-choice="Les Boosters de la Promo Studi">0</span>
+        </div>
       </div>
 
-      <!-- Card 4 -->
       <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
         <div>
           <h2 class="text-xl font-bold text-gray-900 mb-2">4. L'Élite des Marcheurs Studi</h2>
           <p class="text-gray-600 mb-4 text-sm">En utilisant le mot « Élite » de votre « Payroll Boss Elite Club », ce titre donne un sentiment d'appartenance à un groupe performant et motivé. Il est parfait pour une communauté qui veut exceller ensemble.</p>
         </div>
-        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="L'Élite des Marcheurs Studi" href="#" role="button" aria-label="Voter pour L'Élite des Marcheurs Studi">Voter</a>
+        <div class="flex items-center justify-between mt-2">
+          <a class="vote-btn bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="L'Élite des Marcheurs Studi" href="#" role="button" aria-label="Voter pour L'Élite des Marcheurs Studi">Voter</a>
+          <span class="count-badge text-xs bg-gray-100 text-gray-700 border px-2 py-1 rounded" data-choice="L'Élite des Marcheurs Studi">0</span>
+        </div>
       </div>
 
-      <!-- Card 5 -->
       <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
         <div>
           <h2 class="text-xl font-bold text-gray-900 mb-2">5. La Team des Apprenants Studi</h2>
           <p class="text-gray-600 mb-4 text-sm">Un titre simple, direct et très clair. Il ne laisse aucune place au doute sur l'origine et l'objectif de la communauté. Il est idéal si vous recherchez la plus grande prudence et clarté.</p>
         </div>
-        <a class="vote-btn mt-4 bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="La Team des Apprenants Studi" href="#" role="button" aria-label="Voter pour La Team des Apprenants Studi">Voter</a>
+        <div class="flex items-center justify-between mt-2">
+          <a class="vote-btn bg-blue-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300" data-choice="La Team des Apprenants Studi" href="#" role="button" aria-label="Voter pour La Team des Apprenants Studi">Voter</a>
+          <span class="count-badge text-xs bg-gray-100 text-gray-700 border px-2 py-1 rounded" data-choice="La Team des Apprenants Studi">0</span>
+        </div>
       </div>
     </main>
 
@@ -70,30 +87,106 @@
     </footer>
   </div>
 
+  <!-- Toast -->
   <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 hidden bg-gray-900 text-white text-sm px-4 py-2 rounded-lg shadow-lg">Un brouillon d'email a été préparé. Si votre messagerie ne s'ouvre pas, copiez/collez l'adresse : <span class="underline">mathilde.martine.paisley@gmail.com</span></div>
+
+  <!-- Modal Form -->
+  <div id="voteModal" class="fixed inset-0 hidden items-center justify-center z-50">
+    <div class="absolute inset-0 bg-black/40" data-close></div>
+    <div class="relative bg-white w-11/12 max-w-lg rounded-2xl shadow-xl p-6">
+      <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-700" aria-label="Fermer" data-close>&times;</button>
+      <h3 class="text-xl font-bold text-gray-900">Confirmer votre vote</h3>
+      <p id="modalChoice" class="mt-1 text-sm text-gray-600"></p>
+
+      <form id="voteForm" class="mt-4 space-y-3">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Prénom</label>
+          <input type="text" name="firstName" class="mt-1 w-full border rounded-lg px-3 py-2" placeholder="Ex : Alex" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Nom</label>
+          <input type="text" name="lastName" class="mt-1 w-full border rounded-lg px-3 py-2" placeholder="Ex : Martin" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Votre email (optionnel)</label>
+          <input type="email" name="email" class="mt-1 w-full border rounded-lg px-3 py-2" placeholder="vous@exemple.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Message (optionnel)</label>
+          <textarea name="message" rows="3" class="mt-1 w-full border rounded-lg px-3 py-2" placeholder="Un petit mot à joindre…"></textarea>
+        </div>
+        <div class="flex items-center justify-end gap-3 pt-2">
+          <button type="button" class="px-4 py-2 rounded-lg border" data-close>Annuler</button>
+          <button type="submit" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Envoyer mon vote</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script>
     (function () {
-      const RECIPIENT = "mathilde.martine.paisley@gmail.com"; // ✉️ Modifiez ici si besoin
+      // ====== CONFIG ======
+      const RECIPIENT = "mathilde.martine.paisley@gmail.com"; // destinataire principal
+      const CC = ["team@example.com"];                 // ✅ CC optionnelles (modifiez/ajoutez)
+      const BCC = ["archive@example.com"];             // ✅ BCC optionnelles (modifiez/ajoutez)
       const SUBJECT = "Mon vote pour la communauté";
 
-      function buildBody(choice) {
-        // Utilise \n pour des retours chariot universels (convertis en %0D%0A)
-        return (
-          "Bonjour Mathilde,\n\n" +
-          "Je vote pour le titre : " + choice + "\n\n" +
-          "(Envoyé depuis la page de vote)\n"
-        );
+      // Personnalisation politesse & signature
+      const POLITESSE = "Bonjour Mathilde,";            // ex. "Bonjour à toute l'équipe," 
+      const SIGNATURE = "Bien à vous
+La communauté Studi"; // multi‑lignes ok (
+)
+
+      // ====== ÉTAT / TÉLÉMÉTRIE ======
+      const choices = [
+        "La Team des Studi Warriors",
+        "Le Crew Studi",
+        "Les Boosters de la Promo Studi",
+        "L'Élite des Marcheurs Studi",
+        "La Team des Apprenants Studi",
+      ];
+      const counts = Object.fromEntries(choices.map(c => [c, 0]));
+      const records = []; // pour CSV
+
+      // ====== HELPERS ======
+      function buildBody(choice, form) {
+        const nameLine = (form.firstName || form.lastName)
+          ? `Nom: ${form.firstName || ""} ${form.lastName || ""}`.trim()
+          : null;
+        const emailLine = form.email ? `Email: ${form.email}` : null;
+        const msgBlock = form.message ? `
+Message:
+${form.message}` : "";
+
+        const lines = [
+          POLITESSE,
+          "",
+          `Je vote pour le titre : ${choice}`,
+          "",
+          nameLine,
+          emailLine,
+          msgBlock,
+          "",
+          "(Envoyé depuis la page de vote)",
+          "",
+          SIGNATURE,
+        ].filter(Boolean);
+
+        return lines.join("
+");
       }
 
-      function openMailClient(choice) {
-        const body = buildBody(choice);
-        const mailto = `mailto:${encodeURIComponent(RECIPIENT)}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
+      function mailtoURL(recipient, subject, body, ccList = [], bccList = []) {
+        const params = new URLSearchParams();
+        if (subject) params.set("subject", subject);
+        if (body) params.set("body", body);
+        if (ccList.length) params.set("cc", ccList.join(","));
+        if (bccList.length) params.set("bcc", bccList.join(","));
+        return `mailto:${encodeURIComponent(recipient)}?${params.toString()}`;
+      }
 
-        // Ouverture du client mail par défaut
-        window.location.href = mailto;
-
-        // Petit toast d'aide au cas où rien ne s'ouvre (certaines configs bloquent mailto:)
+      function openMailClient(url) {
+        window.location.href = url; // ouverture du client mail
         const toast = document.getElementById("toast");
         if (toast) {
           toast.classList.remove("hidden");
@@ -101,28 +194,97 @@
         }
       }
 
-      // Amélioration progressive : on génère aussi les href pour accessibilité/long‑press sur mobile
-      function setHref(el, choice) {
-        const mailto = `mailto:${encodeURIComponent(RECIPIENT)}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(buildBody(choice))}`;
-        el.setAttribute("href", mailto);
+      function updateBadges() {
+        const total = Object.values(counts).reduce((a, b) => a + b, 0);
+        document.querySelectorAll('.count-badge').forEach(b => {
+          const c = b.getAttribute('data-choice');
+          b.textContent = counts[c] || 0;
+        });
+        const tv = document.getElementById('totalVotes');
+        if (tv) tv.textContent = total + (total > 1 ? ' votes' : ' vote');
       }
 
-      document.querySelectorAll(".vote-btn").forEach((btn) => {
-        const choice = btn.getAttribute("data-choice") || "Mon choix";
-        setHref(btn, choice);
-        btn.addEventListener("click", (e) => {
-          // Laisse le href fonctionner en fallback si l'appel JS est bloqué
-          e.preventDefault();
-          openMailClient(choice);
+      function exportCSV() {
+        const header = ['timestamp','choice','firstName','lastName','email'];
+        const lines = [header.join(',')];
+        records.forEach(r => {
+          const row = [
+            new Date(r.ts).toISOString(),
+            '"' + (r.choice || '').replaceAll('"','""') + '"',
+            '"' + (r.firstName || '').replaceAll('"','""') + '"',
+            '"' + (r.lastName || '').replaceAll('"','""') + '"',
+            '"' + (r.email || '').replaceAll('"','""') + '"',
+          ];
+          lines.push(row.join(','));
         });
-        // Accessibilité clavier
-        btn.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" || e.key === " ") {
+        const blob = new Blob([lines.join('
+')], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'votes.csv';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      // ====== MODAL LOGIC ======
+      const modal = document.getElementById('voteModal');
+      const form = document.getElementById('voteForm');
+      const modalChoice = document.getElementById('modalChoice');
+      let currentChoice = null;
+
+      function openModal(choice) {
+        currentChoice = choice;
+        modalChoice.textContent = `Vous avez sélectionné : ${choice}`;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+      function closeModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        form.reset();
+      }
+
+      modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeModal));
+
+      // Boutons voter -> ouvrent le formulaire
+      document.querySelectorAll('.vote-btn').forEach(btn => {
+        const choice = btn.getAttribute('data-choice') || 'Mon choix';
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          openModal(choice);
+        });
+        btn.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            openMailClient(choice);
+            openModal(choice);
           }
         });
       });
+
+      // Soumission du formulaire -> ouvre l'email + enregistre la télémétrie
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        const body = buildBody(currentChoice, data);
+        const url = mailtoURL(RECIPIENT, SUBJECT, body, CC, BCC);
+
+        // Télémétrie locale
+        counts[currentChoice] = (counts[currentChoice] || 0) + 1;
+        records.push({ ts: Date.now(), choice: currentChoice, firstName: data.firstName || '', lastName: data.lastName || '', email: data.email || '' });
+        updateBadges();
+
+        closeModal();
+        openMailClient(url);
+      });
+
+      // Export CSV
+      document.getElementById('exportCsvBtn').addEventListener('click', exportCSV);
+
+      // Init
+      updateBadges();
     })();
   </script>
 </body>
